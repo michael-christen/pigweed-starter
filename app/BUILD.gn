@@ -1,0 +1,7 @@
+import("$dir_pw_build/pw_executable.gni")
+import("$dir_pw_docgen/docs.gni")
+
+pw_executable("app") {
+  sources = [ "app.cc" ]
+  deps = [ "$dir_pw_log" ]
+}
