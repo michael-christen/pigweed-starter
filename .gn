@@ -1,0 +1,3 @@
+# Setup GN: https://gn.googlesource.com/gn/
+
+buildconfig = "//BUILDCONFIG.gn"
