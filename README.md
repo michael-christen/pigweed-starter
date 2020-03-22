@@ -40,3 +40,5 @@ NOT
 ```
 gn gen --args='pw_target_config = "//targets/stm32f429i-disc1/target_config.gni"' out/disco
 ```
+
+# TODO: Fix pre-push
