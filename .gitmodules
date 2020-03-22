@@ -1,0 +1,3 @@
+[submodule "external/pigweed/repo"]
+	path = external/pigweed/repo
+	url = https://pigweed.googlesource.com/pigweed/pigweed
