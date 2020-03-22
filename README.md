@@ -41,4 +41,17 @@ NOT
 gn gen --args='pw_target_config = "//targets/stm32f429i-disc1/target_config.gni"' out/disco
 ```
 
-# TODO: Fix pre-push
+NOTE: pre-push hook changed from
+
+```
+external/pigweed/repo/pw_presubmit/py/pw_presubmit/pigweed_presubmit.py --base origin/master..HEAD --program quick
+```
+
+to
+
+```
+external/pigweed/repo/pw_presubmit/py/pw_presubmit/pigweed_presubmit.py --base origin/master..HEAD --program quick --repository external/pigweed/repo
+```
+
+I'm assuming this is just completely ignoring my top-level project though, and
+we'll want to revisit this later for formatting help, etc.
