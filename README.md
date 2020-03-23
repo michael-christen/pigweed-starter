@@ -55,3 +55,9 @@ external/pigweed/repo/pw_presubmit/py/pw_presubmit/pigweed_presubmit.py --base o
 
 I'm assuming this is just completely ignoring my top-level project though, and
 we'll want to revisit this later for formatting help, etc.
+
+`pw watch` is getting a file limit issue, just updated `max_user_watches` to
+10,000 with `sudo sysctl fs.inotify.max_user_watches=10000`.
+
+Not getting tests of app to run with `pw watch`.
+> Had to specify test_group with `_run` appended to get it to run.

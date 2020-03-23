@@ -23,9 +23,12 @@ group("default") {
     if (pw_automatic_test_runner == "") {
       # Without a test runner defined, build the tests but don't run them.
       deps += [ ":pw_module_tests" ]
+      deps += [ ":app_tests" ]
     } else {
       # With a test runner, depend on the run targets so they run with the build.
       deps += [ ":pw_module_tests_run" ]
+      # test groups when referenced with a magic "_run" at the end run the test
+      deps += [ ":app_tests_run" ]
     }
   }
   if (pw_build_host_tools) {
@@ -75,6 +78,12 @@ group("pw_modules") {
       "$dir_pw_tokenizer",
     ]
   }
+}
+
+pw_test_group("app_tests") {
+  group_deps = [
+    "//app:tests",
+  ]
 }
 
 # Targets for all module unit test groups.
