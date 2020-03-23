@@ -1,3 +1,5 @@
 out/
 
 .presubmit
+
+.mypy_cache

@@ -1,4 +1,3 @@
-
 import("host_common.gni")
 
 declare_args() {
